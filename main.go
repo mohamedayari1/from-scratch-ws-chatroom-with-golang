@@ -15,6 +15,7 @@ func getLinesChannel(f io.ReadCloser) chan string {
 	go func() {
 		defer close(out)
 		defer f.Close()
+		fmt.Println("This is a goroutine reading lines")
 		
 		str := ""
 		

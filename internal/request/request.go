@@ -36,8 +36,7 @@ var ErrorMalformedRequestLine = fmt.Errorf("malformed request-line")
 var ErrorUnsupportedHTTPVersion = fmt.Errorf("unsupported HTTP version")
 var ErrorRequestInErrorState = fmt.Errorf("request in error state")
 var SEPARATOR = []byte("\r\n")
-
-
+ 
 
 
 func parseRequestLine(b []byte) (*RequestLine, int, error) {
@@ -135,3 +134,7 @@ func RequestFromReader(reader io.Reader) (*Request, error) {
 
 
 }
+
+
+
+ 
